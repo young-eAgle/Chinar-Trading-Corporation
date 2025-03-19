@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-150",
+        "brand": "Nasgas",
+        "price": 22000.0,
+        "discount": 2.22,
+        "actualPrice": 22500.0,
+        "discountedPrice": 22000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b26b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740715209/Products/qghpkffp1ccrxzppjmj7.png",
+        "images": []
+    },
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-101",
+        "brand": "Nasgas",
+        "price": 19000.0,
+        "discount": 18.63,
+        "actualPrice": 23350.0,
+        "discountedPrice": 19000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b26b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740715211/Products/khelwqbfkt8e2wxnh6md.jpg",
+        "images": []
+    },
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-121",
+        "brand": "Nasgas",
+        "price": 21000.0,
+        "discount": 14.29,
+        "actualPrice": 24500.0,
+        "discountedPrice": 21000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b26b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740715214/Products/aarln04ba1owgkdyl3z9.jpg",
+        "images": []
+    },
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-200",
+        "brand": "Nasgas",
+        "price": 23500.0,
+        "discount": 12.48,
+        "actualPrice": 26850.0,
+        "discountedPrice": 23500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b26b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740715216/Products/iagrypyvn0imommjyrlk.jpg",
+        "images": []
+    },
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-250",
+        "brand": "Nasgas",
+        "price": 24500.0,
+        "discount": 15.52,
+        "actualPrice": 29000.0,
+        "discountedPrice": 24500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b26b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740715221/Products/jyq2nhufmjfwgfpgp6ud.png",
+        "images": []
+    }
+]

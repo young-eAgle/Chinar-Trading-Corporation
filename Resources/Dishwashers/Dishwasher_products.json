@@ -1,0 +1,94 @@
+[
+    {
+        "name": "DDW 1480 Inox Inverter Dishwasher",
+        "brand": "Dawlance",
+        "price": 204000.0,
+        "discount": 0.0,
+        "actualPrice": 204000.0,
+        "discountedPrice": 204000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b25d",
+        "subcategoryId": "67bdc0f14ef0ac7a003e938d",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/7664763977_LO1_20170731_102514.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DDW 1485 Glass Door Inverter Dishwasher",
+        "brand": "Dawlance",
+        "price": 183600.0,
+        "discount": 0.0,
+        "actualPrice": 183600.0,
+        "discountedPrice": 183600.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b25d",
+        "subcategoryId": "67bdc0f14ef0ac7a003e938d",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/7694068077_LO1_20200603_134311.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DDW 1451 Silver Inverter Dishwasher",
+        "brand": "Dawlance",
+        "price": 188700.0,
+        "discount": 0.0,
+        "actualPrice": 188700.0,
+        "discountedPrice": 188700.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b25d",
+        "subcategoryId": "67bdc0f14ef0ac7a003e938d",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/7610608077_LO1_20210126_103028.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DDW 1471 Inox Inverter Dishwasher",
+        "brand": "Dawlance",
+        "price": 190799.0,
+        "discount": 0.0,
+        "actualPrice": 190799.0,
+        "discountedPrice": 190799.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b25d",
+        "subcategoryId": "67bdc0f14ef0ac7a003e938d",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/7608098077_MDM2_LOW_1.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DDW 1470 Glass Black Inverter Dishwasher",
+        "brand": "Dawlance",
+        "price": 205492.0,
+        "discount": 0.0,
+        "actualPrice": 205492.0,
+        "discountedPrice": 205492.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b25d",
+        "subcategoryId": "67bdc0f14ef0ac7a003e938d",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/7608198077_MDM2_LOW_1.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DDW 1350 Silver Dishwasher",
+        "brand": "Dawlance",
+        "price": 95900.0,
+        "discount": 0.0,
+        "actualPrice": 95900.0,
+        "discountedPrice": 95900.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b25d",
+        "subcategoryId": "67bdc0f14ef0ac7a003e938d",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/7675168077_LO1_20200828_170735.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DDW 868 Counter Top Black Dishwasher",
+        "brand": "Dawlance",
+        "price": 90000.0,
+        "discount": 0.0,
+        "actualPrice": 90000.0,
+        "discountedPrice": 90000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b25d",
+        "subcategoryId": "67bdc0f14ef0ac7a003e938d",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/8886023700_LO1_20220415_113812.png/530Wx530H/image.webp",
+        "images": []
+    }
+]
+

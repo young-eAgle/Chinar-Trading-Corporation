@@ -1,0 +1,151 @@
+[
+    {
+        "name": "Blaze Series Google TV 43\" E22 2K FHD",
+        "brand": "Dawlance",
+        "price": 77000.0,
+        "discount": 0.0,
+        "actualPrice": 77000.0,
+        "discountedPrice": 77000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740638733/Products/c2jrdrltudajc4fihjvs.webp",
+        "images": []
+    },
+    {
+        "name": "Blaze Series Google TV 40\" E22 2K FHD",
+        "brand": "Dawlance",
+        "price": 73000.0,
+        "discount": 0.0,
+        "actualPrice": 73000.0,
+        "discountedPrice": 73000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740638736/Products/qohgwa3dywuarp0u5chz.webp",
+        "images": []
+    },
+    {
+        "name": "Canvas Series Android TV 50\" G3A 4K UHD",
+        "brand": "Dawlance",
+        "price": 115000.0,
+        "discount": 0.0,
+        "actualPrice": 115000.0,
+        "discountedPrice": 115000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740638738/Products/mqzay6eolsdllnbdjdma.webp",
+        "images": []
+    },
+    {
+        "name": "Canvas Series Android TV 55\" G3A 4K UHD",
+        "brand": "Dawlance",
+        "price": 140000.0,
+        "discount": 0.0,
+        "actualPrice": 140000.0,
+        "discountedPrice": 140000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740638742/Products/u8yfpkhie55qs1iuazdi.webp",
+        "images": []
+    },
+    {
+        "name": "Radiant Series Google TV 65\" G22 4K UHD",
+        "brand": "Dawlance",
+        "price": 177999.0,
+        "discount": 0.0,
+        "actualPrice": 177999.0,
+        "discountedPrice": 177999.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740638744/Products/purggoooahvlcf1fbhpg.webp",
+        "images": []
+    },
+    {
+        "name": "Blaze Series Google TV 32\" E22 2K HD",
+        "brand": "Dawlance",
+        "price": 56500.0,
+        "discount": 0.0,
+        "actualPrice": 56500.0,
+        "discountedPrice": 56500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740638747/Products/pk1gf2cm7qjna2bdhysi.webp",
+        "images": []
+    },
+
+    {
+        "name": "Canvas Series Android TV 43\" G3A 4K UHD",
+        "brand": "Dawlance",
+        "price": 87000.0,
+        "discount": 0.0,
+        "actualPrice": 87000.0,
+        "discountedPrice": 87000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740636601/Products/cqzrnpts9mkettpxvudv.webp",
+        "images": []
+    },
+   
+    {
+        "name": "Canvas Series Android TV 65\" G3A 4K UHD",
+        "brand": "Dawlance",
+        "price": 195000.0,
+        "discount": 0.0,
+        "actualPrice": 195000.0,
+        "discountedPrice": 195000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740636688/Products/awhocubwinzaesuq1q0w.webp",
+        "images": []
+    },
+    {
+        "name": "Radiant Series Google TV 43\" G22 4K UHD",
+        "brand": "Dawlance",
+        "price": 81000.0,
+        "discount": 0.0,
+        "actualPrice": 81000.0,
+        "discountedPrice": 81000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740636711/Products/co4scqo2vluby2pcvniq.webp",
+        "images": []
+    },
+    {
+        "name": "Radiant Series Google TV 55\" G22 4K UHD",
+        "brand": "Dawlance",
+        "price": 120000.0,
+        "discount": 0.0,
+        "actualPrice": 120000.0,
+        "discountedPrice": 120000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740636734/Products/xpxokwwjowvcvxqgms1w.webp",
+        "images": []
+    },
+    {
+        "name": "Radiant Series Google TV 50\" G22 4K UHD",
+        "brand": "Dawlance",
+        "price": 105000.0,
+        "discount": 0.0,
+        "actualPrice": 105000.0,
+        "discountedPrice": 105000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24f",
+        "subcategoryId": "67bdc27c4ef0ac7a003e939b",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740636756/Products/rsjloswww7jk1qlwrbxu.webp",
+        "images": []
+    }
+
+
+
+
+]

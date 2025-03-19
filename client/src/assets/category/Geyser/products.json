@@ -1,0 +1,93 @@
+[
+    {
+        "sku":827470,
+        "name":"Super Asia Electric Geyser REH-10",
+        "brand":"Super Asia",
+        "price":2700000,
+        "discount":10,
+        "actualPrice":2850000,
+        "available":true,
+        "categoryId":"67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b267",
+        "company":"Chinar Appliances",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1739755121/ecommerce/itses85zvnvmqu1d9n8m.webp"
+    },
+    {
+        "sku":827471,
+        "name":"Super Asia E+G Geyser 25 Gallon (GEH-725)",
+        "brand":"Super Asia",
+        "price":4730000,
+        "discount":5,
+        "actualPrice":4980000,
+        "available":true,
+        "categoryId":"67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b267",
+        "company":"Chinar Appliances",
+         "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1739755121/ecommerce/ookwhlvgip587th7oprk.webp"
+    },
+    {
+        "sku":827472,
+        "name":"Canon Fast Electric Geyser FEWH-15 LCM",
+        "brand":"Canon",
+        "price":2650000,
+        "discount":5,
+        "actualPrice":2790000,
+        "available":true,
+        "categoryId":"67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b267",
+        "company":"Canon Appliances",
+         "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1739755121/ecommerce/zhsjqznyoprols9qoy0t.webp"
+    },
+    {
+        "sku":827473,
+        "name":"Canon Fast Electric Geyser FEWH-50 LY",
+        "brand":"Canon",
+        "price":3790000,
+        "discount":5,
+        "actualPrice":3990000,
+        "available":true,
+        "categoryId":"67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b267",
+        "company":"Canon Appliances",
+         "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1739755121/ecommerce/wnbczp06sfn4lva9k8x9.webp"
+    },
+    {
+        "sku":827074,
+        "name":"NasGas 25 Liters Instant Electric Geyser SEM-250",
+        "brand":"NasGas",
+        "price":2450000,
+        "discount":5,
+        "actualPrice":2580000,
+        "available":true,
+        "categoryId":"67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b267",
+        "company":"NasGas",
+         "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1739755121/ecommerce/sbff2o6boxnffm8msd42.webp"
+    },
+    {
+        "sku":827075,
+        "name":"NasGas 10 Liter Semi Instant Electric Geyser SEM-101",
+        "brand":"NasGas",
+        "price":1800000,
+        "discount":5,
+        "actualPrice":1900000,
+        "available":true,
+        "categoryId":"67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b267",
+        "company":"NasGas",
+         "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1739755121/ecommerce/d3wzaf50arwsrq3rtr8u.webp"
+    },
+    {
+        "sku":827076,
+        "name":"NasGas 20 Liter Semi-Instant Electric Geyser SEM-200",
+        "brand":"NasGas",
+        "price":2350000,
+        "discount":5,
+        "actualPrice":2480000,
+        "available":true,
+        "categoryId":"67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b267",
+        "company":"NasGas",
+         "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1739755121/ecommerce/p1vrejlge3p5per1ukxb.webp"
+    }
+]

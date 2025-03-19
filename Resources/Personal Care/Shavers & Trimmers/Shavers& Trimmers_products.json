@@ -1,0 +1,54 @@
+[
+    {
+        "name": "DWMGK 9030 Grooming Kit",
+        "brand": "Dawlance",
+        "price": 17000.0,
+        "discount": 0.0,
+        "actualPrice": 17000.0,
+        "discountedPrice": 17000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b255",
+        "subcategoryId": "67bdbda84ef0ac7a003e9362",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000000318_LO1_20230816_085937.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWMS 6240 Shaver",
+        "brand": "Dawlance",
+        "price": 11000.0,
+        "discount": 0.0,
+        "actualPrice": 11000.0,
+        "discountedPrice": 11000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b255",
+        "subcategoryId": "67bdbda84ef0ac7a003e9362",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000000327_LO1_20230816_093030.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWMC 8030 Trimmer",
+        "brand": "Dawlance",
+        "price": 11500.0,
+        "discount": 0.0,
+        "actualPrice": 11500.0,
+        "discountedPrice": 11500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b255",
+        "subcategoryId": "67bdbda84ef0ac7a003e9362",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000000316_LO1_20230816_092206.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWMC 9030 Zeus Trimmer",
+        "brand": "Dawlance",
+        "price": 13500.0,
+        "discount": 0.0,
+        "actualPrice": 13500.0,
+        "discountedPrice": 13500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b255",
+        "subcategoryId": "67bdbda84ef0ac7a003e9362",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000000317_LO1_20230816_091031.png/530Wx530H/image.webp",
+        "images": []
+    }
+]

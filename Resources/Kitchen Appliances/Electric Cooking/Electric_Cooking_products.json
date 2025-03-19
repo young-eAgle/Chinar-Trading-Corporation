@@ -1,0 +1,93 @@
+[
+    {
+        "name": "DWAF 3374 B XXL Air Fryer",
+        "brand": "Dawlance",
+        "price": 55500.0,
+        "discount": 0.0,
+        "actualPrice": 55500.0,
+        "discountedPrice": 55500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b251",
+        "subcategoryId": "67bdbdd24ef0ac7a003e936b",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000041000_LO1_20240402_103922.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWAF 6322 D XL Air Fryer",
+        "brand": "Dawlance",
+        "price": 42000.0,
+        "discount": 0.0,
+        "actualPrice": 42000.0,
+        "discountedPrice": 42000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b251",
+        "subcategoryId": "67bdbdd24ef0ac7a003e936b",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000041200_LO1_20240401_101522.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWMC 3015 Multi Cooker",
+        "brand": "Dawlance",
+        "price": 39000.0,
+        "discount": 0.0,
+        "actualPrice": 39000.0,
+        "discountedPrice": 39000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b251",
+        "subcategoryId": "67bdbdd24ef0ac7a003e936b",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000000290_LO1_20230828_092613.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWAF 6321 L XL Air Fryer",
+        "brand": "Dawlance",
+        "price": 32500.0,
+        "discount": 0.0,
+        "actualPrice": 32500.0,
+        "discountedPrice": 32500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b251",
+        "subcategoryId": "67bdbdd24ef0ac7a003e936b",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000041100_LO1_20240401_100748.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWHP 3021 W Hot Plate",
+        "brand": "Dawlance",
+        "price": 16500.0,
+        "discount": 0.0,
+        "actualPrice": 16500.0,
+        "discountedPrice": 16500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b251",
+        "subcategoryId": "67bdbdd24ef0ac7a003e936b",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/8770053700_LO1_20240311_141434.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWAF 3013 Air Fryer",
+        "brand": "Dawlance",
+        "price": 30000.0,
+        "discount": 0.0,
+        "actualPrice": 30000.0,
+        "discountedPrice": 30000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b251",
+        "subcategoryId": "67bdbdd24ef0ac7a003e936b",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/F01000000236_LO1_20231010_110019.png/530Wx530H/image.webp",
+        "images": []
+    },
+    {
+        "name": "DWHP 3021 B Hot Plate",
+        "brand": "Dawlance",
+        "price": 16500.0,
+        "discount": 0.0,
+        "actualPrice": 16500.0,
+        "discountedPrice": 16500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b251",
+        "subcategoryId": "67bdbdd24ef0ac7a003e936b",
+        "imageUrl": "https://www.dawlance.com.pk/media/resize/8770063700_LO1_20240408_090918.png/530Wx530H/image.webp",
+        "images": []
+    }
+]

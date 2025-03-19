@@ -1,0 +1,80 @@
+[
+    {
+        "name": "NWH-100 HYB",
+        "brand": "Nasgas",
+        "price": 65000.0,
+        "discount": 7.14,
+        "actualPrice": 70000.0,
+        "discountedPrice": 65000.0,
+        "available": true,
+        "categoryId": null,
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2024/11/webNWH-100-HYB-430x430.png",
+        "images": []
+    },
+    {
+        "name": "NWH-50 D",
+        "brand": "Nasgas",
+        "price": 37500.0,
+        "discount": 1.32,
+        "actualPrice": 38000.0,
+        "discountedPrice": 37500.0,
+        "available": true,
+        "categoryId": null,
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2024/11/d-50-3-430x430.png",
+        "images": []
+    },
+    {
+        "name": "DEG-25 Deluxe",
+        "brand": "Nasgas",
+        "price": 41750.0,
+        "discount": 13.92,
+        "actualPrice": 48500.0,
+        "discountedPrice": 41750.0,
+        "available": true,
+        "categoryId": null,
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2019/04/DEG-35-SUPER-DLX-Double-Safety-430x430.jpg",
+        "images": []
+    },
+    {
+        "name": "DEG-35 SUPER DLX (Double Safety)",
+        "brand": "Nasgas",
+        "price": 51000.0,
+        "discount": 8.6,
+        "actualPrice": 55800.0,
+        "discountedPrice": 51000.0,
+        "available": true,
+        "categoryId": null,
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2019/04/DEG-35-SUPER-DLX-Double-Safety-430x430.jpg",
+        "images": []
+    },
+    {
+        "name": "DEG-35 SUPER HEAVY",
+        "brand": "Nasgas",
+        "price": 56700.0,
+        "discount": 8.4,
+        "actualPrice": 61900.0,
+        "discountedPrice": 56700.0,
+        "available": true,
+        "categoryId": null,
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2019/04/DEG-35-SUPER-DLX-Double-Safety-430x430.jpg",
+        "images": []
+    },
+    {
+        "name": "DEG-55 SUPER DLX (Double Safety)",
+        "brand": "Nasgas",
+        "price": 58200.0,
+        "discount": 8.45,
+        "actualPrice": 63570.0,
+        "discountedPrice": 58200.0,
+        "available": true,
+        "categoryId": null,
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2019/04/DEG-55-SUPER-DLX-Double-Safety-430x430.jpg",
+        "images": []
+    }
+]

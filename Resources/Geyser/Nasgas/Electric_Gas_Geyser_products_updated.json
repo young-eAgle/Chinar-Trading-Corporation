@@ -1,0 +1,80 @@
+[
+    {
+        "name": " Nasgas Electric Gas Geyser NWH-100 HYB",
+        "brand": "Nasgas",
+        "price": 65000.0,
+        "discount": 7.14,
+        "actualPrice": 70000.0,
+        "discountedPrice": 65000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b267",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740713519/Products/sagq6uu5jzr5be2t6hfv.png",
+        "images": []
+    },
+    {
+        "name": " Nasgas Electric Gas Geyser NWH-50 D",
+        "brand": "Nasgas",
+        "price": 37500.0,
+        "discount": 1.32,
+        "actualPrice": 38000.0,
+        "discountedPrice": 37500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b267",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740713525/Products/yhhfnkybzckpntht1sj2.png",
+        "images": []
+    },
+    {
+        "name": " Nasgas Electric Gas Geyser DEG-25 Deluxe",
+        "brand": "Nasgas",
+        "price": 41750.0,
+        "discount": 13.92,
+        "actualPrice": 48500.0,
+        "discountedPrice": 41750.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b267",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740713528/Products/yzjy84k6jthmgbbhoukh.jpg",
+        "images": []
+    },
+    {
+        "name": " Nasgas Electric Gas Geyser DEG-35 SUPER DLX (Double Safety)",
+        "brand": "Nasgas",
+        "price": 51000.0,
+        "discount": 8.6,
+        "actualPrice": 55800.0,
+        "discountedPrice": 51000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b267",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740713580/Products/afd73sqbmwvfvngqwctn.jpg",
+        "images": []
+    },
+    {
+        "name": " Nasgas Electric Gas Geyser DEG-35 SUPER HEAVY",
+        "brand": "Nasgas",
+        "price": 56700.0,
+        "discount": 8.4,
+        "actualPrice": 61900.0,
+        "discountedPrice": 56700.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b267",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740713600/Products/xsd7z0gc3cnxrb7f4zpy.jpg",
+        "images": []
+    },
+    {
+        "name": " Nasgas Electric Gas Geyser DEG-55 SUPER DLX (Double Safety)",
+        "brand": "Nasgas",
+        "price": 58200.0,
+        "discount": 8.45,
+        "actualPrice": 63570.0,
+        "discountedPrice": 58200.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": "67b02686e4667bfb97e2b267",
+        "imageUrl": "https://res.cloudinary.com/dvn45bv4m/image/upload/v1740713641/Products/thyoxddlnncw3r2whkew.jpg",
+        "images": []
+    }
+]

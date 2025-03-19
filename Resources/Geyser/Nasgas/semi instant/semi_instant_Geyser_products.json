@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-150",
+        "brand": "Nasgas",
+        "price": 22000.0,
+        "discount": 2.22,
+        "actualPrice": 22500.0,
+        "discountedPrice": 22000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId":"67b02686e4667bfb97e2b26b",
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2023/11/sem-150-430x430.png",
+        "images": []
+    },
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-101",
+        "brand": "Nasgas",
+        "price": 19000.0,
+        "discount": 18.63,
+        "actualPrice": 23350.0,
+        "discountedPrice": 19000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2021/12/GN3-1-1-430x430.jpg",
+        "images": []
+    },
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-121",
+        "brand": "Nasgas",
+        "price": 21000.0,
+        "discount": 14.29,
+        "actualPrice": 24500.0,
+        "discountedPrice": 21000.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2021/12/GN3-1-1-430x430.jpg",
+        "images": []
+    },
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-200",
+        "brand": "Nasgas",
+        "price": 23500.0,
+        "discount": 12.48,
+        "actualPrice": 26850.0,
+        "discountedPrice": 23500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2021/12/sem-200-2-430x430.jpg",
+        "images": []
+    },
+    {
+        "name": "Nasgas Semi Instant Electric Water Heater SEM-250",
+        "brand": "Nasgas",
+        "price": 24500.0,
+        "discount": 15.52,
+        "actualPrice": 29000.0,
+        "discountedPrice": 24500.0,
+        "available": true,
+        "categoryId": "67afffa3e4667bfb97e2b24e",
+        "subcategoryId": null,
+        "imageUrl": "https://nasgas.com/wp-content/uploads/2022/12/sme-250-430x430.png",
+        "images": []
+    }
+]

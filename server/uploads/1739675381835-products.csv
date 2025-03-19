@@ -1,0 +1,8 @@
+sku,name,brand,price,discount,actualPrice,available,categoryId,subcategoryId,company
+8.27473E+12,Super Asia Electric Geyser REH-10,Super Asia,2700000,10,2850000,TRUE,67afffa3e4667bfb97e2b24e,67b02686e4667bfb97e2b267,Chinar Appliances
+8.27472E+12,Super Asia E+G Geyser 25 Gallon (GEH-725),Super Asia,4730000,5,4980000,TRUE,67afffa3e4667bfb97e2b24e,67b02686e4667bfb97e2b267,Chinar Appliances
+8.27472E+12,Canon Fast Electric Geyser FEWH-15 LCM,Canon,2650000,5,2790000,TRUE,67afffa3e4667bfb97e2b24e,67b02686e4667bfb97e2b267,Canon Appliances
+8.27471E+12,Canon Fast Electric Geyser FEWH-50 LY,Canon,3790000,5,3990000,TRUE,67afffa3e4667bfb97e2b24e,67b02686e4667bfb97e2b267,Canon Appliances
+8.27055E+12,NasGas 25 Liters Instant Electric Geyser SEM-250,NasGas,2450000,5,2580000,TRUE,67afffa3e4667bfb97e2b24e,67b02686e4667bfb97e2b267,NasGas
+8.27055E+12,NasGas 10 Liter Semi Instant Electric Geyser SEM-101,NasGas,1800000,5,1900000,TRUE,67afffa3e4667bfb97e2b24e,67b02686e4667bfb97e2b267,NasGas
+8.27055E+12,NasGas 20 Liter Semi-Instant Electric Geyser SEM-200,NasGas,2350000,5,2480000,TRUE,67afffa3e4667bfb97e2b24e,67b02686e4667bfb97e2b267,NasGas
