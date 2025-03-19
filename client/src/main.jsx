@@ -17,3 +17,4 @@ createRoot(document.getElementById("root")).render(
   </AuthProvider>
   // </StrictMode>,
 );
+// There is no need of the strict mode in production?
