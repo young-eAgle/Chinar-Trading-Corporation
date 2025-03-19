@@ -691,7 +691,8 @@ const Gyser = ({ title, categoryId }) => {
     const fetchProducts = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(`http://localhost:5000/products/category/${categoryId}`);
+        const response = await axios.get(`http://46.202.166.65/products/category/${categoryId}`);
+        // http://46.202.166.65/products/67c00ad51f4719a09bf8edbd
         setProducts(response.data);
       } catch (error) {
         setError(error.message);
