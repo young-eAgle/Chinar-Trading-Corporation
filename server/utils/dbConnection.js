@@ -37,53 +37,49 @@ const options = {
 };
 
 // Connect function with retry logic
-const connectDB = async () => {
-    if (isConnected) return;
+ const connectDB = async () => {
+    console.log('Attempting to connect to MongoDB...');
+    const NODE_ENV = process.env.NODE_ENV || 'development';
+    console.log('Database connection using NODE_ENV:', NODE_ENV);
     
+    // First try Atlas
     try {
-        // Prevent rapid reconnection attempts
-        const now = Date.now();
-        if (now - connectionAttemptTimestamp < 5000 && retryCount > 0) {
-            console.log('Too many rapid reconnection attempts, waiting longer...');
-            await new Promise(resolve => setTimeout(resolve, 5000));
+        const atlasUri = process.env.MONGODB_ATLAS_URI || process.env.CONNECTION_STRING;
+        console.log('Connection string:', atlasUri ? atlasUri.replace(/:[^:]*@/, ':***@') : undefined);
+        
+        if (atlasUri) {
+            console.log('Attempting Atlas connection...');
+            await mongoose.connect(atlasUri, {
+
+                serverSelectionTimeoutMS: 5000, // 5 second timeout
+            });
+            
+            const db = mongoose.connection.db;
+            console.log('✅ MongoDB connected successfully');
+            console.log('MongoDB Name:', db.databaseName);
+            console.log('MongoDB Host:', mongoose.connection.host);
+            console.log('Connection state:', mongoose.connection.readyState);
+            return true;
+        } else {
+            console.log('No Atlas connection string found, trying local connection...');
         }
+    } catch (atlasError) {
+        console.error('❌ Atlas connection failed:', atlasError.message);
         
-        connectionAttemptTimestamp = now;
-        console.log('Attempting to connect to MongoDB...');
-        console.log(`Connection string: ${process.env.CONNECTION_STRING?.replace(/\/\/([^:]+):([^@]+)@/, '//***:***@')}`);
-        
-        const db = await mongoose.connect(process.env.CONNECTION_STRING, options);
-        
-        console.log('✅ MongoDB connected successfully');
-        console.log(`MongoDB Name: ${db.connection.name}`);
-        console.log(`MongoDB Host: ${db.connection.host}`);
-        console.log(`Connection state: ${mongoose.connection.readyState}`);
-        isConnected = true;
-        retryCount = 0; // Reset retry count on successful connection
-        
-        // Setup listeners
-        setupListeners();
-        
-        return db;
-    } catch (error) {
-        console.error('❌ MongoDB connection error:', error);
-        console.error('Error name:', error.name);
-        console.error('Error code:', error.code);
-        
-        // Check for specific error types
-        if (error.name === 'MongoServerSelectionError') {
-            console.error('Could not select a MongoDB server. Check network or firewall issues.');
-        } else if (error.name === 'MongoNetworkError') {
-            console.error('Network error connecting to MongoDB. Check your internet connection.');
-        } else if (error.name === 'MongoNotConnectedError') {
-            console.error('Not connected to MongoDB server.');
-        } else if (error.name === 'MongoError' && error.code === 18) {
-            console.error('Authentication failed. Check your username and password.');
-        } else if (error.name === 'MongoError' && error.code === 13) {
-            console.error('Authentication failed. Check user permissions.');
+        // Then try local MongoDB
+        try {
+            const localUri = process.env.MONGODB_LOCAL_URI || 'mongodb://localhost:27017/e-commereceDatabase';
+            console.log('Attempting Local MongoDB connection with:', localUri);
+            await mongoose.connect(localUri, {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+            });
+            console.log('✅ Connected to Local MongoDB');
+            return true;
+        } catch (localError) {
+            console.error('❌ Local connection failed:', localError.message);
+            throw new Error('All database connection attempts failed');
         }
-        
-        await handleConnectionFailure();
     }
 };
 
@@ -165,21 +161,15 @@ const handleConnectionFailure = async () => {
 
 // Check if the database is connected
 const isDbConnected = () => {
-    return isConnected && mongoose.connection.readyState === 1;
+    return mongoose.connection.readyState === 1;
 };
 
 // Perform a simple ping to check if the DB connection is alive
-const pingDB = async () => {
+ const pingDB = async () => {
     try {
-        if (!isDbConnected()) {
-            return false;
-        }
-        
-        // Execute a simple command to check connection
         await mongoose.connection.db.admin().ping();
         return true;
     } catch (error) {
-        console.error(`Ping failed: ${error.message}`);
         return false;
     }
 };
