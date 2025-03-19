@@ -38,7 +38,7 @@ const HomePage = () => {
   const { data: categories, isLoading: categoriesLoading } = useQuery({
     queryKey: ['categories'],
     queryFn: async () => {
-      const response = await axios.get('http://localhost:5000/categories');
+      const response = await axios.get('http://46.202.166.65/categories');
       return response.data;
     },
   });

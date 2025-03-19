@@ -17,7 +17,7 @@ const Newsletter = () => {
     setIsSubmitting(true);
     try {
       // Replace with your actual API endpoint
-      const response = await fetch('http://localhost:5000/api/newsletter/subscribe', {
+      const response = await fetch('http://46.202.166.65/api/newsletter/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

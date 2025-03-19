@@ -18,7 +18,7 @@ const FeaturedProducts = () => {
   const { data: products, isLoading, error: queryError } = useQuery({
     queryKey: ['featured-products'],
     queryFn: async () => {
-      const response = await axios.get('http://localhost:5000/api/home/featured');
+      const response = await axios.get('http://46.202.166.65/api/home/featured');
       console.log('Featured products from API:', response.data);
       console.log('Number of featured products:', response.data.length);
       return response.data;
