@@ -16,7 +16,7 @@ const OrderTracking = () => {
         try {
             setLoading(true);
             setError(null);
-            const response = await fetch(`http://localhost:5000/orders/order/${orderReference}`, {
+            const response = await fetch(`http://46.202.166.65/orders/order/${orderReference}`, {
                 headers: {
                     "Content-Type": "application/json",
                 },

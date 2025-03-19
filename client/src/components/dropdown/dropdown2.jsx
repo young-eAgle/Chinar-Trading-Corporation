@@ -84,7 +84,7 @@ const Dropdown = memo(({ isOpen, setIsOpen }) => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await axios.get("http://localhost:5000/categories");
+      const response = await axios.get("http://46.202.166.65/categories");
       setCategories(response.data);
     } catch (err) {
       setError("Failed to load categories. Please try again.");
@@ -119,7 +119,7 @@ const Dropdown = memo(({ isOpen, setIsOpen }) => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await axios.get(`http://localhost:5000/subcategories/category/${id}`);
+      const response = await axios.get(`http://46.202.166.65/subcategories/category/${id}`);
       setSubcategories(response.data);
     } catch (err) {
       setError("Failed to load subcategories. Please try again.");

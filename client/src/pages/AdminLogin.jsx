@@ -20,7 +20,7 @@ const AdminLogin = () => {
         try {
             setLoading(true);
             
-            const response = await fetch('http://localhost:5000/admin/login', {
+            const response = await fetch('http://46.202.166.65/admin/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

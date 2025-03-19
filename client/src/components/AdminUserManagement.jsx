@@ -24,7 +24,7 @@ const AdminUserManagement = () => {
 
   const loadAdmins = async () => {
     try {
-      const response = await fetch('http://localhost:5000/admin/users', {
+      const response = await fetch('http://46.202.166.65/admin/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -46,8 +46,8 @@ const AdminUserManagement = () => {
     e.preventDefault();
     try {
       const url = editingAdmin
-        ? `http://localhost:5000/admin/users/${editingAdmin._id}`
-        : 'http://localhost:5000/admin/create';
+        ? `http://46.202.166.65/admin/users/${editingAdmin._id}`
+        : 'http://46.202.166.65/admin/create';
       
       const method = editingAdmin ? 'PUT' : 'POST';
 
@@ -76,7 +76,7 @@ const AdminUserManagement = () => {
     if (!window.confirm('Are you sure you want to delete this admin?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/admin/users/${adminId}`, {
+      const response = await fetch(`http://46.202.166.65/admin/users/${adminId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

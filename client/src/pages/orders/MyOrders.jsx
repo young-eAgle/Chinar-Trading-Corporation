@@ -207,7 +207,7 @@ const UserOrders = () => {
     const handleGuestTrackOrder = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/orders/guest/${guestOrderId}`, {
+            const response = await fetch(`http://46.202.166.65/orders/guest/${guestOrderId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

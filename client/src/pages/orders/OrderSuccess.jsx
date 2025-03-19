@@ -18,7 +18,7 @@ const OrderSuccess = () => {
     useEffect(() => {
         const fetchOrder = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/orders/order/${orderId}`, {
+                const response = await fetch(`http://46.202.166.65/orders/order/${orderId}`, {
                     headers: {
                         "Content-Type": "application/json",
                     },

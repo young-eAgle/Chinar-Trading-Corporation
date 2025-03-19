@@ -39,7 +39,7 @@ const AdminRegister = () => {
         try {
             setLoading(true);
             
-            const response = await fetch('http://localhost:5000/admin/register', {
+            const response = await fetch('http://46.202.166.65/admin/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

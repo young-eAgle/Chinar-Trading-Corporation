@@ -33,7 +33,7 @@ const AdminDashboard = () => {
         try {
             setLoading(true);
             
-            const response = await fetch('http://localhost:5000/admin/dashboard', {
+            const response = await fetch('http://46.202.166.65/admin/dashboard', {
                 headers: {
                     'Authorization': `Bearer ${admin?.token}`
                 },

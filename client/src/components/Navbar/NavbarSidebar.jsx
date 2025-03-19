@@ -23,7 +23,7 @@ const NavbarSidebar = ({ isOpen, onClose }) => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://localhost:5000/categories');
+        const response = await fetch('http://46.202.166.65/categories');
         const data = await response.json();
         setCategories(data);
       } catch (error) {

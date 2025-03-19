@@ -7,7 +7,7 @@ import { toast } from 'react-hot-toast';
 
 // Create axios instance with base URL
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'http://46.202.166.65/api',
   withCredentials: true
 });
 

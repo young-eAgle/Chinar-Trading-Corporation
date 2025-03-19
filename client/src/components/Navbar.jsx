@@ -33,7 +33,7 @@ const Navbar = () => {
   const { data: specialOffers } = useQuery({
     queryKey: ['special-offers'],
     queryFn: async () => {
-      const response = await axios.get('http://localhost:5000/api/home/special-offers');
+      const response = await axios.get('http://46.202.166.65/api/home/special-offers');
       return response.data;
     }
   });

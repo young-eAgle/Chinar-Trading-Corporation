@@ -8,7 +8,7 @@ const Dropdown = ({ isDropDownOpen }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/categories") // Fixed URL
+      .get("http://46.202.166.65/api/categories") // Fixed URL
       .then((response) => {
         console.log("API Response:", response.data);
 

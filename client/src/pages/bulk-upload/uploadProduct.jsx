@@ -27,7 +27,7 @@ const BulkUpload = () => {
     setUploading(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/products/bulk-upload",
+        "http://46.202.166.65/products/bulk-upload",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

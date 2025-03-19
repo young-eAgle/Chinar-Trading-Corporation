@@ -17,7 +17,7 @@ const ReviewSlider = () => {
     const fetchReviews = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get("http://localhost:5000/api/reviews");
+        const response = await axios.get("http://46.202.166.65/api/reviews");
         console.log("Reviews data received:", response.data);
         setReviews(response.data);
         setFilteredReviews(response.data);
