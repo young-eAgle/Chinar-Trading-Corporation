@@ -101,7 +101,7 @@ const app = express();
 
 // Configure CORS based on environment
 app.use(cors({
-    origin: FRONTEND_URL,
+    origin:["http://chinartrading.com", "http://www.chinartrading.com"],
     credentials: true, // Ensure credentials are included
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
