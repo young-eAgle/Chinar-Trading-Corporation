@@ -47,14 +47,14 @@ const ProductCategories = () => {
   const [categories, setCategories] = useState([]);
 
   const defaultCategories = [
-    { id: "67afffa3e4667bfb97e2b24d", name: "Air Conditioners", img: "../src/assets/category/AC.jpg" },
-    { id: "67afffa3e4667bfb97e2b24f", name: "LED TVs", img: "./src/assets/category/led tv.jpg" },
-    { id: "67afffa3e4667bfb97e2b258", name: "Built in Ovens", img: "./src/assets/category/Oven.jpg" },
-    { id: "67affa77cf40bd9eb2b13285", name: "Refrigerators", img: "./src/assets/category/Refrigators.jpg" },
-    { id: "67afffa3e4667bfb97e2b252", name: "Washing Machines", img: "./src/assets/category/washing machine.jpg" },
-    { id: "67afffa3e4667bfb97e2b250", name: "Water Dispensers", img: "./src/assets/category/water dispensar.jpg" },
-    { id: "67afffa3e4667bfb97e2b25c", name: "Deep Freezers", img: "./src/assets/category/deep freezer.jpg" },
-    { id: "67afffa3e4667bfb97e2b251", name: "Kitchen Appliances", img: "./src/assets/category/k app.jpg" },
+    { id: "67afffa3e4667bfb97e2b24d", name: "Air Conditioners", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372633/AC_k4c1uj.webp" },
+    { id: "67afffa3e4667bfb97e2b24f", name: "LED TVs", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372634/led_tv_mcrr4k.webp" },
+    { id: "67afffa3e4667bfb97e2b258", name: "Built in Ovens", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372635/Oven_hjsmlk.webp" },
+    { id: "67affa77cf40bd9eb2b13285", name: "Refrigerators", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372635/Refrigators_dsr1m7.webp" },
+    { id: "67afffa3e4667bfb97e2b252", name: "Washing Machines", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372636/washing_machine_we6haj.webp" },
+    { id: "67afffa3e4667bfb97e2b250", name: "Water Dispensers", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372636/water_dispensar_aylvnv.webp" },
+    { id: "67afffa3e4667bfb97e2b25c", name: "Deep Freezers", img: ".https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372633/deep_freezer_gmgbyx.webp" },
+    { id: "67afffa3e4667bfb97e2b251", name: "Kitchen Appliances", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372634/k_app_hzanrp.webp" },
   ];
 
   useEffect(() => {

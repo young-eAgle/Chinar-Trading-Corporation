@@ -22,19 +22,19 @@ const Banner = () => {
       <Slider {...settings}>
         {/* Image One */}
         <div className=" z-[-900]  xl:h-[520px] w-full flex justify-center items-center bg-black outline-none ">
-          <img className=" w-full h-full object-fit outline-none " src="./src/assets/banners/b2.jpg" alt="" />
+          <img className=" w-full h-full object-fit outline-none " src="https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372450/b2_x7uu3e.jpg" alt="" />
         </div>
         {/* Image Two */}
         <div className=" z-[-900] xl:h-[520px] w-full flex items-center justify-center outline-none ">
-          <img className="   h-full w-full object-fit  border-yellow-400  outline-none" src="./src/assets/banners/banner3.jpg" alt="" />
+          <img className="   h-full w-full object-fit  border-yellow-400  outline-none" src="https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372449/b5_ercdgv.jpg" alt="" />
         </div>
         {/* Third Image  */}
         <div className=" z-[-900] xl:h-[520px] w-full flex items-center justify-center bg-black outline-none ">
-          <img  className=" h-full w-full object-fit outline-none" src="./src/assets/banners/b4.jpg" alt="" />
+          <img  className=" h-full w-full object-fit outline-none" src="https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372449/b4_anrkup.jpg" alt="" />
         </div>
         {/*  Fourth Image  */}
         <div className=" z-[-900] xl:h-[520px]  w-full flex items-center justify-center outline-none">
-          <img className="w-full h-full object-fit outline-none" src="./src/assets/banners/b5.jpg" alt="" />
+          <img className="w-full h-full object-fit outline-none" src="https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372448/banner3_uy3ooy.jpg" alt="" />
         </div>
 
         {/* Fourth Image */}
