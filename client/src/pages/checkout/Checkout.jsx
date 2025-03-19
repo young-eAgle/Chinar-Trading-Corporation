@@ -2,7 +2,8 @@ import React, { useState, useEffect, memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../cart/cartContext";
 import { useAuth } from "../../Context/authContext";
-// import { countries } from 'countries-list';
+// import { countries } from 'countries-list'; 
+// Checkout was changed
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaCreditCard,
