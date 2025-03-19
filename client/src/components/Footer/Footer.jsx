@@ -31,22 +31,22 @@ const Footer = () => {
   // Feature cards data
   const features = [
     {
-      icon: "/src/assets/footer/icon-1.svg",
+      icon: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742374097/icon-1_ie7wn5.svg",
       title: "Best Prices & Offers",
       description: "Orders $50 or more"
     },
     {
-      icon: "/src/assets/footer/icon-2.svg",
+      icon: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742374096/icon-2_cws23h.svg",
       title: "Free Delivery",
       description: "24/7 amazing services"
     },
     {
-      icon: "/src/assets/footer/icon-3.svg",
+      icon: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742374096/icon-3_ykiv6a.svg",
       title: "Great Daily Deal",
       description: "When you sign up"
     },
     {
-      icon: "/src/assets/footer/icon-5.svg",
+      icon: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742374096/icon-4_wey4zc.svg",
       title: "Wide Assortment",
       description: "Mega Discounts"
     }

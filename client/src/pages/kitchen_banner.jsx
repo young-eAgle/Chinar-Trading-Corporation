@@ -29,7 +29,7 @@ const KitchenBanner = () => {
       <div className="relative container w-full overflow-hidden">
         <img
           className="w-full object-cover"
-          src="../src/assets/Kitchen_Banner.jpg"
+          src="https://res.cloudinary.com/dvn45bv4m/image/upload/v1742373169/Kitchen_Banner_w3gghm.webp"
           alt="Kitchen Appliances"
         />
 
