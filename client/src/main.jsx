@@ -18,3 +18,4 @@ createRoot(document.getElementById("root")).render(
   // </StrictMode>,
 );
 // There is no need of the strict mode in production?
+// We will learn about Strict Mode now
