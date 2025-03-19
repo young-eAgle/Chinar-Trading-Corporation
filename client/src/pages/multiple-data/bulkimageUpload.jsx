@@ -17,7 +17,7 @@ export default function BulkImageUpload() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/bulk/bulk-images", formData, {
+      const response = await axios.post("http://46.202.166.65/bulk/bulk-images", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setUploadedImages(response.data.images);

@@ -19,7 +19,7 @@ export default function BulkProductUpload() {
     reader.onload = async (event) => {
       try {
         const jsonData = JSON.parse(event.target.result);
-        await axios.post("http://localhost:5000/bulk/bulk-products", jsonData);
+        await axios.post("http://46.202.166.65/bulk/bulk-products", jsonData);
         alert("Products uploaded successfully!");
       } catch (error) {
         console.error("Error uploading products:", error);

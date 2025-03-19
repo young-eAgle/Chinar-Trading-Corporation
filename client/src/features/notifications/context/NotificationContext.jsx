@@ -99,7 +99,7 @@ export const NotificationProvider = ({ children }) => {
         headers['Guest-Email'] = guestEmail;
       }
 
-      const response = await fetch('http://localhost:5000/api/notifications', {
+      const response = await fetch('http://46.202.166.65/api/notifications', {
         headers,
         credentials: 'include'
       });
@@ -240,7 +240,7 @@ export const NotificationProvider = ({ children }) => {
       
       console.log('Registering notification token:', { hasUserToken: !!userToken, hasEmail: !!body.email });
       
-      const response = await fetch('http://localhost:5000/api/notifications/register', {
+      const response = await fetch('http://46.202.166.65/api/notifications/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -287,7 +287,7 @@ export const NotificationProvider = ({ children }) => {
 
   const updatePreferences = async (newPreferences) => {
     try {
-      const response = await fetch('http://localhost:5000/api/notifications/preferences', {
+      const response = await fetch('http://46.202.166.65/api/notifications/preferences', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -324,7 +324,7 @@ export const NotificationProvider = ({ children }) => {
     try {
       const userToken = localStorage.getItem('token');
       
-      const response = await fetch(`http://localhost:5000/api/notifications/${notificationId}/read`, {
+      const response = await fetch(`http://46.202.166.65/api/notifications/${notificationId}/read`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

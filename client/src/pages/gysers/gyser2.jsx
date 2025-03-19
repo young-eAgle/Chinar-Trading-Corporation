@@ -109,7 +109,7 @@ const Gyser = ({ title }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products/category/67afffa3e4667bfb97e2b24e")
+      .get("http://46.202.166.65/products/category/67afffa3e4667bfb97e2b24e")
       .then((response) => {
         setProducts(response.data);
         console.log("This is Response:", response.data);
@@ -560,7 +560,7 @@ const Dropdown = ({ isOpen, setIsOpen }) => {
   // ✅ Fetch categories
   useEffect(() => {
     axios
-      .get("http://localhost:5000/categories")
+      .get("http://46.202.166.65/categories")
       .then((response) => setCategories(response.data))
       .catch((error) => console.error("Error fetching categories:", error));
   }, []);
@@ -570,7 +570,7 @@ const Dropdown = ({ isOpen, setIsOpen }) => {
     if (!categoryId) return;
 
     axios
-      .get(`http://localhost:5000/subcategories/category/${categoryId}`)
+      .get(`http://46.202.166.65/subcategories/category/${categoryId}`)
       .then((response) => {
         setSubcategories(response.data);
       })

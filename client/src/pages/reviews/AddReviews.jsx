@@ -114,7 +114,7 @@ const AddReview = ({ selectedReview, fetchReviews, clearSelection }) => {
 
       console.log('Submitting review with data:', reviewData);
       
-      const response = await fetch('http://localhost:5000/api/reviews', {
+      const response = await fetch('http://46.202.166.65/api/reviews', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -140,7 +140,7 @@ const AddReview = ({ selectedReview, fetchReviews, clearSelection }) => {
         
         try {
           console.log('Uploading images for review:', responseData.reviewId);
-          const imageResponse = await fetch('http://localhost:5000/api/reviews/upload-images', {
+          const imageResponse = await fetch('http://46.202.166.65/api/reviews/upload-images', {
             method: 'POST',
             credentials: 'include',
             body: imageForm

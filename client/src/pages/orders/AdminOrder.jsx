@@ -84,7 +84,7 @@ const AdminOrders = () => {
       
       console.log("Updating order status:", orderId, newStatus);
       
-      const response = await fetch(`http://localhost:5000/orders/admin/update/${orderId}`, {
+      const response = await fetch(`http://46.202.166.65/orders/admin/update/${orderId}`, {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
@@ -156,7 +156,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://localhost:5000/orders/${orderId}/invoice`, {
+      const response = await fetch(`http://46.202.166.65/orders/${orderId}/invoice`, {
         headers: {
           "Authorization": `Bearer ${admin.token}`
         },
@@ -189,7 +189,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://localhost:5000/orders/${trackingInfo.orderId}/tracking`, {
+      const response = await fetch(`http://46.202.166.65/orders/${trackingInfo.orderId}/tracking`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -218,7 +218,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://localhost:5000/orders/${statusInfo.orderId}/tracking-status`, {
+      const response = await fetch(`http://46.202.166.65/orders/${statusInfo.orderId}/tracking-status`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -247,7 +247,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://localhost:5000/orders/${communication.orderId}/communication`, {
+      const response = await fetch(`http://46.202.166.65/orders/${communication.orderId}/communication`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -275,7 +275,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://localhost:5000/orders/admin/order-timeline/${orderId}`, {
+      const response = await fetch(`http://46.202.166.65/orders/admin/order-timeline/${orderId}`, {
         headers: {
           'Authorization': `Bearer ${admin.token}`
         },
@@ -301,7 +301,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch('http://localhost:5000/orders/admin/stats', {
+      const response = await fetch('http://46.202.166.65/orders/admin/stats', {
         headers: {
           'Authorization': `Bearer ${admin.token}`,
           'Content-Type': 'application/json'
@@ -329,7 +329,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch('http://localhost:5000/orders/admin/export', {
+      const response = await fetch('http://46.202.166.65/orders/admin/export', {
         headers: {
           'Authorization': `Bearer ${admin.token}`,
           'Content-Type': 'application/json'

@@ -19,7 +19,7 @@ const UserProfile = () => {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const response = await axios.get("http://localhost:5000/api/users/preferences", {
+        const response = await axios.get("http://46.202.166.65/api/users/preferences", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -43,7 +43,7 @@ const UserProfile = () => {
       };
 
       await axios.put(
-        "http://localhost:5000/api/users/preferences",
+        "http://46.202.166.65/api/users/preferences",
         { notificationPreferences: updatedPreferences },
         { headers: { Authorization: `Bearer ${token}` } }
       );
