@@ -211,9 +211,9 @@ const Navbar = () => {
             <a href="/about us" className="hover:text-blue-600 transition-colors">
               <li className="cursor-pointer">About Us</li>
             </a>
-            <li className="hover:text-blue-600 cursor-pointer transition-colors">
+            <a href="https://www.google.com/maps/place/Chinar+Trading+Corporation/@33.5609529,73.0113553,19z/data=!4m14!1m7!3m6!1s0x38df936be0066fb1:0x542c11aca8300f8f!2sChinar+Trading+Corporation!8m2!3d33.5609663!4d73.0118998!16s%2Fg%2F11kwr6mgxx!3m5!1s0x38df936be0066fb1:0x542c11aca8300f8f!8m2!3d33.5609663!4d73.0118998!16s%2Fg%2F11kwr6mgxx?entry=ttu&g_ep=EgoyMDI1MDMxOS4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D " target="blank"><li className="hover:text-blue-600 cursor-pointer transition-colors">
               Store Location
-            </li>
+            </li></a>
             <a href="/contact us" className="hover:text-blue-600 transition-colors">
               <li className="cursor-pointer">Contact Us</li>
             </a>

@@ -73,9 +73,9 @@ export default function ContactUs() {
       {/* Contact Details */}
       <section className="py-16 bg-gray-200 text-center">
         <h2 className="text-3xl font-semibold mb-6">Contact Information</h2>
-        <p className="text-lg">📍 123 Business Street, City, Country</p>
-        <p className="text-lg">📞 +1 234 567 890</p>
-        <p className="text-lg">✉️ contact@company.com</p>
+        <p className="text-lg">📍Chakri Road Lala Rukh Colony Stop Near Askari Bank,Rawalpindi, Pakistan</p>
+        <p className="text-lg">📞  +92 317 3336141</p>
+        <p className="text-lg">✉️ chinartrading@estore.com</p>
       </section>
     </div>
   );

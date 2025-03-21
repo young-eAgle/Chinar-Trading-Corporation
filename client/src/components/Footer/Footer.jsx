@@ -237,9 +237,9 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-blue-500 mt-1" />
                 <span className="text-gray-400">
-                  123 Tech Street, Digital City,
+                  Chakri Road Lala Rukh Colony Stop Near Askari Bank,
                   <br />
-                  Lahore, Pakistan
+                  Rawalpindi, Pakistan
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -251,7 +251,7 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <FaEnvelope className="w-5 h-5 text-blue-500" />
                 <a href="mailto:support@techstore.com" className="text-gray-400 hover:text-white transition-colors">
-                  support@techstore.com
+                  chinartrading@estore.com
                 </a>
               </li>
             </ul>

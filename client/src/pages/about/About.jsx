@@ -1,4 +1,21 @@
 export default function AboutUs() {
+  let staff = [
+    { id:1,
+      name:"Sajjad Abbasi",
+      job : "C.E.O",
+      img : ""
+    },
+    { id:2,
+      name:"Asif Razza",
+      job : "Full Stack Developer",
+      img : "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742527155/WhatsApp_Image_2024-11-13_at_7.45.13_PM_r5r6ie.jpg"
+    },
+    { id:3,
+      name:"Muhammad Shabbir",
+      job : "Oracle Apex Developer ",
+      img : "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742527537/shabbir_shb_wcnn0q.png"
+    },
+  ]
   return (
     <div className="bg-gray-100 text-gray-800 mt-35">
       {/* Hero Section */}
@@ -27,11 +44,11 @@ export default function AboutUs() {
       <section className="py-16 px-6 md:px-20 bg-white">
         <h2 className="text-3xl font-semibold text-center mb-10">Meet Our Team</h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-          {[1, 2, 3].map((_, i) => (
+          {staff.map((staff, i) => (
             <div key={i} className="bg-gray-200 p-6 rounded-xl text-center">
-              <div className="w-24 h-24 bg-gray-400 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold">John Doe</h3>
-              <p className="text-gray-600">Software Engineer</p>
+              <img src={staff.img} className="w-24 h-24 object-cover bg-gray-400 rounded-full object-top mx-auto mb-4"></img>
+              <h3 className="text-xl font-semibold">{staff.name}</h3>
+              <p className="text-gray-600">{staff.job}</p>
             </div>
           ))}
         </div>
