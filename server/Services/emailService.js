@@ -1,5 +1,31 @@
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
 // // import "dotenv/config"; // Removed to prevent .env file from being loaded multiple times
+
+
+// Determine file path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load environment variables from the correct file
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const envFile = NODE_ENV === 'production' 
+  ? join(__dirname, '..', '.env.production')
+  : join(__dirname, '..', '.env.development');
+
+const fallbackEnvFile = join(__dirname, '..', '.env');
+
+// Load environment variables from the correct file
+if (fs.existsSync(envFile)) {
+  console.log(`EmailService: Loading environment from ${envFile}`);
+  dotenv.config({ path: envFile });
+} else if (fs.existsSync(fallbackEnvFile)) {
+  console.log(`EmailService: Loading environment from ${fallbackEnvFile}`);
+  dotenv.config({ path: fallbackEnvFile });
+}
 
 // Log email configuration for debugging (without showing the actual password)
 console.log("Email configuration:");

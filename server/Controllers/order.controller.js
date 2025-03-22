@@ -1,3 +1,31 @@
+
+// Ensure environment variables are loaded before other imports
+import dotenv from 'dotenv';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
+
+// Determine file path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load environment variables from the correct file
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const envFile = NODE_ENV === 'production' 
+  ? join(__dirname, '..', '.env.production')
+  : join(__dirname, '..', '.env.development');
+
+const fallbackEnvFile = join(__dirname, '..', '.env');
+
+// Load environment variables from the correct file
+if (fs.existsSync(envFile)) {
+  console.log(`OrderController: Loading environment from ${envFile}`);
+  dotenv.config({ path: envFile });
+} else if (fs.existsSync(fallbackEnvFile)) {
+  console.log(`OrderController: Loading environment from ${fallbackEnvFile}`);
+  dotenv.config({ path: fallbackEnvFile });
+}
+
 import Order from "../models/model.order.js";
 import User from "../models/model.user.js";
 import asyncHandler from "express-async-handler";
