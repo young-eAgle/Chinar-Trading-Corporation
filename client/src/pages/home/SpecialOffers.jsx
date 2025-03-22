@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useCart } from '../cart/cartContext';
 import { useNotification } from '../../features/notifications/context/NotificationContext';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const SpecialOffers = () => {
   const { dispatch: cartDispatch, cart } = useCart();
@@ -17,7 +18,7 @@ const SpecialOffers = () => {
   const { data: specialOffers, isLoading, error } = useQuery({
     queryKey: ['special-offers'],
     queryFn: async () => {
-      const response = await axios.get('http://46.202.166.65/api/home/special-offers');
+      const response = await axios.get(`${API_URL}/api/home/special-offers`);
       return response.data;
     }
   });

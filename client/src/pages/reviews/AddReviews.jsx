@@ -4,10 +4,11 @@ import { FaStar, FaImage, FaTimes } from 'react-icons/fa';
 import axios from 'axios';
 import { useQueryClient } from '@tanstack/react-query';
 import { toast } from 'react-hot-toast';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 // Create axios instance with base URL
 const api = axios.create({
-  baseURL: 'http://46.202.166.65/api',
+  baseURL: `${API_URL}/api`,
   withCredentials: true
 });
 
@@ -114,7 +115,7 @@ const AddReview = ({ selectedReview, fetchReviews, clearSelection }) => {
 
       console.log('Submitting review with data:', reviewData);
       
-      const response = await fetch('http://46.202.166.65/api/reviews', {
+      const response = await fetch(`${API_URL}/api/reviews`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -140,7 +141,7 @@ const AddReview = ({ selectedReview, fetchReviews, clearSelection }) => {
         
         try {
           console.log('Uploading images for review:', responseData.reviewId);
-          const imageResponse = await fetch('http://46.202.166.65/api/reviews/upload-images', {
+          const imageResponse = await fetch(`${API_URL}/api/reviews/upload-images`, {
             method: 'POST',
             credentials: 'include',
             body: imageForm

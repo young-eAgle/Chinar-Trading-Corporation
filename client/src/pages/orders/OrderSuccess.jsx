@@ -5,6 +5,7 @@ import { FaCheckCircle, FaBox, FaTruck, FaHome, FaList, FaWhatsapp } from "react
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../Context/authContext.jsx";
 import { useNotification } from "../../features/notifications/context/NotificationContext";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const OrderSuccess = () => {
     const { orderId } = useParams();
@@ -18,7 +19,7 @@ const OrderSuccess = () => {
     useEffect(() => {
         const fetchOrder = async () => {
             try {
-                const response = await fetch(`http://46.202.166.65/orders/order/${orderId}`, {
+                const response = await fetch(`${API_URL}/orders/order/${orderId}`, {
                     headers: {
                         "Content-Type": "application/json",
                     },

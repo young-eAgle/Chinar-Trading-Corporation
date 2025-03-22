@@ -3,6 +3,7 @@ import { FaChevronRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 // Loading component for categories
 const LoadingCategories = () => (
@@ -84,7 +85,7 @@ const Dropdown = memo(({ isOpen, setIsOpen }) => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await axios.get("http://46.202.166.65/categories");
+      const response = await axios.get(`${API_URL}/categories`);
       setCategories(response.data);
     } catch (err) {
       setError("Failed to load categories. Please try again.");
@@ -119,7 +120,7 @@ const Dropdown = memo(({ isOpen, setIsOpen }) => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await axios.get(`http://46.202.166.65/subcategories/category/${id}`);
+      const response = await axios.get(`${API_URL}/subcategories/category/${id}`);
       setSubcategories(response.data);
     } catch (err) {
       setError("Failed to load subcategories. Please try again.");

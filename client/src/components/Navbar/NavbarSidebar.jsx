@@ -10,6 +10,7 @@ import { AiFillDashboard } from 'react-icons/ai';
 import { MdCategory, MdLocalOffer, MdHelp, MdContactSupport } from 'react-icons/md';
 import { BiStore } from 'react-icons/bi';
 import { BsFillBagCheckFill } from 'react-icons/bs';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const NavbarSidebar = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
@@ -19,11 +20,12 @@ const NavbarSidebar = ({ isOpen, onClose }) => {
   const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+
   // Fetch categories
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://46.202.166.65/categories');
+        const response = await fetch(`${API_URL}/categories`);
         const data = await response.json();
         setCategories(data);
       } catch (error) {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 export default function BulkProductUpload() {
   const [jsonFile, setJsonFile] = useState(null);
@@ -19,7 +20,7 @@ export default function BulkProductUpload() {
     reader.onload = async (event) => {
       try {
         const jsonData = JSON.parse(event.target.result);
-        await axios.post("http://46.202.166.65/bulk/bulk-products", jsonData);
+        await axios.post(`${API_URL}/bulk/bulk-products`, jsonData);
         alert("Products uploaded successfully!");
       } catch (error) {
         console.error("Error uploading products:", error);

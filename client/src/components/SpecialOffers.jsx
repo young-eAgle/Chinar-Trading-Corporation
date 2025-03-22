@@ -4,12 +4,13 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaTag, FaClock } from 'react-icons/fa';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const SpecialOffers = () => {
   const { data: specialOffers, isLoading, error } = useQuery({
     queryKey: ['special-offers'],
     queryFn: async () => {
-      const response = await axios.get('http://46.202.166.65/api/home/special-offers');
+      const response = await axios.get( `${API_URL}/api/home/special-offers`);
       return response.data;
     }
   });

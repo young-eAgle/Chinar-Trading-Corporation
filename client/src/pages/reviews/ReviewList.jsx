@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { Rating, Avatar, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const ReviewSlider = () => {
   const [reviews, setReviews] = useState([]);
@@ -17,7 +18,7 @@ const ReviewSlider = () => {
     const fetchReviews = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get("http://46.202.166.65/api/reviews");
+        const response = await axios.get(`${API_URL}/api/reviews`);
         console.log("Reviews data received:", response.data);
         setReviews(response.data);
         setFilteredReviews(response.data);

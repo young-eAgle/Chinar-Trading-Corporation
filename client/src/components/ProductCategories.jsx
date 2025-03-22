@@ -53,7 +53,7 @@ const ProductCategories = () => {
     { id: "67affa77cf40bd9eb2b13285", name: "Refrigerators", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372635/Refrigators_dsr1m7.webp" },
     { id: "67afffa3e4667bfb97e2b252", name: "Washing Machines", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372636/washing_machine_we6haj.webp" },
     { id: "67afffa3e4667bfb97e2b250", name: "Water Dispensers", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372636/water_dispensar_aylvnv.webp" },
-    { id: "67afffa3e4667bfb97e2b25c", name: "Deep Freezers", img: ".https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372633/deep_freezer_gmgbyx.webp" },
+    { id: "67afffa3e4667bfb97e2b25c", name: "Deep Freezers", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372633/deep_freezer_gmgbyx.webp" },
     { id: "67afffa3e4667bfb97e2b251", name: "Kitchen Appliances", img: "https://res.cloudinary.com/dvn45bv4m/image/upload/v1742372634/k_app_hzanrp.webp" },
   ];
 

@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { FaUserPlus, FaUserEdit, FaUserMinus, FaUserShield } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { useAuth } from '../Context/authContext';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
+
 
 const AdminUserManagement = () => {
   const [admins, setAdmins] = useState([]);
@@ -24,7 +26,7 @@ const AdminUserManagement = () => {
 
   const loadAdmins = async () => {
     try {
-      const response = await fetch('http://46.202.166.65/admin/users', {
+      const response = await fetch(`${API_URL}/admin/users`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -46,8 +48,8 @@ const AdminUserManagement = () => {
     e.preventDefault();
     try {
       const url = editingAdmin
-        ? `http://46.202.166.65/admin/users/${editingAdmin._id}`
-        : 'http://46.202.166.65/admin/create';
+        ? `${API_URL}/admin/users/${editingAdmin._id}`
+        : `${API_URL}/admin/create`;
       
       const method = editingAdmin ? 'PUT' : 'POST';
 
@@ -76,7 +78,7 @@ const AdminUserManagement = () => {
     if (!window.confirm('Are you sure you want to delete this admin?')) return;
 
     try {
-      const response = await fetch(`http://46.202.166.65/admin/users/${adminId}`, {
+      const response = await fetch(`${API_URL}/admin/users/${adminId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

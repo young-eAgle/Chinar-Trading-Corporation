@@ -12,6 +12,7 @@ import Dropdown2 from "./dropdown/dropdown2";
 // import { useQuery } from "react-query";
 import { useQuery } from '@tanstack/react-query';
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 // Loading component for suspense
 const LoadingSpinner = () => (
@@ -33,7 +34,7 @@ const Navbar = () => {
   const { data: specialOffers } = useQuery({
     queryKey: ['special-offers'],
     queryFn: async () => {
-      const response = await axios.get('http://46.202.166.65/api/home/special-offers');
+      const response = await axios.get(`${API_URL}/api/home/special-offers`);
       return response.data;
     }
   });

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Use environment variables for configuration
-const API_URL = import.meta.env.VITE_API_URL || "http://46.202.166.65";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const api = axios.create({
   baseURL: API_URL,

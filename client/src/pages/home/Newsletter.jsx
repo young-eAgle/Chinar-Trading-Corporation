@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope } from 'react-icons/fa';
 import { toast } from 'react-hot-toast';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
@@ -17,7 +18,7 @@ const Newsletter = () => {
     setIsSubmitting(true);
     try {
       // Replace with your actual API endpoint
-      const response = await fetch('http://46.202.166.65/api/newsletter/subscribe', {
+      const response = await fetch(`${API_URL}/api/newsletter/subscribe`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

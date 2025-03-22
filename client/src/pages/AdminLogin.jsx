@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('');
@@ -20,7 +21,7 @@ const AdminLogin = () => {
         try {
             setLoading(true);
             
-            const response = await fetch('http://46.202.166.65/admin/login', {
+            const response = await fetch(`${API_URL}/admin/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Dialog, Transition } from "@headlessui/react";
-
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const SimpleModal = ({ isOpen, onClose, product }) => {
   if (!product) return null;
@@ -691,8 +691,7 @@ const Gyser = ({ title, categoryId }) => {
     const fetchProducts = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(`http://46.202.166.65/products/category/${categoryId}`);
-        // http://46.202.166.65/products/67c00ad51f4719a09bf8edbd
+        const response = await axios.get(`${API_URL}/products/category/${categoryId}`);
         setProducts(response.data);
       } catch (error) {
         setError(error.message);

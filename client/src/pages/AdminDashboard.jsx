@@ -4,6 +4,7 @@ import { useAdmin } from '../Context/adminContext';
 import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import { FaBox, FaUsers, FaShoppingCart, FaDollarSign, FaChartLine, FaListAlt } from 'react-icons/fa';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const AdminDashboard = () => {
     const { admin, hasPermission } = useAdmin();
@@ -33,7 +34,7 @@ const AdminDashboard = () => {
         try {
             setLoading(true);
             
-            const response = await fetch('http://46.202.166.65/admin/dashboard', {
+            const response = await fetch(`${API_URL}/admin/dashboard`, {
                 headers: {
                     'Authorization': `Bearer ${admin?.token}`
                 },

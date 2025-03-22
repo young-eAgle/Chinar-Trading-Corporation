@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 export default function BulkImageUpload() {
   const [selectedFiles, setSelectedFiles] = useState(null);
@@ -17,7 +18,7 @@ export default function BulkImageUpload() {
     }
 
     try {
-      const response = await axios.post("http://46.202.166.65/bulk/bulk-images", formData, {
+      const response = await axios.post(`${API_URL}/bulk/bulk-images`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setUploadedImages(response.data.images);

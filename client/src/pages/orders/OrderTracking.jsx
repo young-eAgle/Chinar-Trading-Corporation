@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaSearch, FaTruck, FaBox, FaCheckCircle, FaTimesCircle, FaSpinner, FaWhatsapp } from "react-icons/fa";
 import { toast } from "react-hot-toast";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const OrderTracking = () => {
     const { orderId } = useParams();
@@ -16,7 +17,7 @@ const OrderTracking = () => {
         try {
             setLoading(true);
             setError(null);
-            const response = await fetch(`http://46.202.166.65/orders/order/${orderReference}`, {
+            const response = await fetch(`${API_URL}/orders/order/${orderReference}`, {
                 headers: {
                     "Content-Type": "application/json",
                 },

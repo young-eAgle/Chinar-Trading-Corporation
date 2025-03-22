@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 // Lazy load components
 const Banner = lazy(() => import('../Home Banners/banner'));
@@ -38,7 +39,7 @@ const HomePage = () => {
   const { data: categories, isLoading: categoriesLoading } = useQuery({
     queryKey: ['categories'],
     queryFn: async () => {
-      const response = await axios.get('http://46.202.166.65/categories');
+      const response = await axios.get(`${API_URL}/categories`);
       return response.data;
     },
   });

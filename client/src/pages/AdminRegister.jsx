@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const AdminRegister = () => {
     const [formData, setFormData] = useState({
@@ -39,7 +40,7 @@ const AdminRegister = () => {
         try {
             setLoading(true);
             
-            const response = await fetch('http://46.202.166.65/admin/register', {
+            const response = await fetch(`${API_URL}/admin/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

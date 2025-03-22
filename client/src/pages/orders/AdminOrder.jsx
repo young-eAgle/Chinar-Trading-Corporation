@@ -9,6 +9,7 @@ import OrderTimeline from '../../components/OrderTimeline';
 import ShippingTracking from '../../components/ShippingTracking';
 import CustomerCommunication from '../../components/CustomerCommunication';
 import { useNavigate } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -84,7 +85,7 @@ const AdminOrders = () => {
       
       console.log("Updating order status:", orderId, newStatus);
       
-      const response = await fetch(`http://46.202.166.65/orders/admin/update/${orderId}`, {
+      const response = await fetch(`${API_URL}/orders/admin/update/${orderId}`, {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
@@ -156,7 +157,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://46.202.166.65/orders/${orderId}/invoice`, {
+      const response = await fetch(`${API_URL}/orders/${orderId}/invoice`, {
         headers: {
           "Authorization": `Bearer ${admin.token}`
         },
@@ -189,7 +190,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://46.202.166.65/orders/${trackingInfo.orderId}/tracking`, {
+      const response = await fetch(`${API_URL}/orders/${trackingInfo.orderId}/tracking`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -218,7 +219,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://46.202.166.65/orders/${statusInfo.orderId}/tracking-status`, {
+      const response = await fetch(`${API_URL}/orders/${statusInfo.orderId}/tracking-status`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -247,7 +248,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://46.202.166.65/orders/${communication.orderId}/communication`, {
+      const response = await fetch(`${API_URL}/orders/${communication.orderId}/communication`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -275,7 +276,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch(`http://46.202.166.65/orders/admin/order-timeline/${orderId}`, {
+      const response = await fetch(`${API_URL}/orders/admin/order-timeline/${orderId}`, {
         headers: {
           'Authorization': `Bearer ${admin.token}`
         },
@@ -301,7 +302,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch('http://46.202.166.65/orders/admin/stats', {
+      const response = await fetch(`${API_URL}/orders/admin/stats`, {
         headers: {
           'Authorization': `Bearer ${admin.token}`,
           'Content-Type': 'application/json'
@@ -329,7 +330,7 @@ const AdminOrders = () => {
         return;
       }
       
-      const response = await fetch('http://46.202.166.65/orders/admin/export', {
+      const response = await fetch(`${API_URL}/orders/admin/export`, {
         headers: {
           'Authorization': `Bearer ${admin.token}`,
           'Content-Type': 'application/json'

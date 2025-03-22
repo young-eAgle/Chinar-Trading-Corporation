@@ -2,13 +2,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import React from "react";
 
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
+
 const Dropdown = ({ isDropDownOpen }) => {
   const [expandedCategory, setExpandedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://46.202.166.65/api/categories") // Fixed URL
+      .get(`${API_URL}/api/categories`) // Fixed URL
       .then((response) => {
         console.log("API Response:", response.data);
 

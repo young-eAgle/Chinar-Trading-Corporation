@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNotification } from "../../context/notificationContext";
 import usePushNotification from "../../hooks/usePushNotification";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const UserProfile = () => {
   const { showNotification } = useNotification();
@@ -19,7 +20,7 @@ const UserProfile = () => {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const response = await axios.get("http://46.202.166.65/api/users/preferences", {
+        const response = await axios.get(`${API_URL}/api/users/preferences`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -43,7 +44,7 @@ const UserProfile = () => {
       };
 
       await axios.put(
-        "http://46.202.166.65/api/users/preferences",
+        `${API_URL}/api/users/preferences`,
         { notificationPreferences: updatedPreferences },
         { headers: { Authorization: `Bearer ${token}` } }
       );

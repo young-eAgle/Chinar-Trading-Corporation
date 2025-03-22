@@ -5,6 +5,7 @@ import { fetchUserOrders, fetchGuestOrders } from "../../Service/Order.Service.j
 import { useAuth } from "../../Context/authContext.jsx";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const UserOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -207,7 +208,7 @@ const UserOrders = () => {
     const handleGuestTrackOrder = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://46.202.166.65/orders/guest/${guestOrderId}`, {
+            const response = await fetch(`${API_URL}/orders/guest/${guestOrderId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

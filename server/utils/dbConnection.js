@@ -70,10 +70,7 @@ const options = {
         try {
             const localUri = process.env.MONGODB_LOCAL_URI || 'mongodb://localhost:27017/e-commereceDatabase';
             console.log('Attempting Local MongoDB connection with:', localUri);
-            await mongoose.connect(localUri, {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            });
+            await mongoose.connect(localUri);
             console.log('✅ Connected to Local MongoDB');
             return true;
         } catch (localError) {

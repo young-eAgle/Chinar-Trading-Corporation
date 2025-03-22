@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const BulkUpload = () => {
   const [csvFile, setCsvFile] = useState(null);
@@ -27,7 +28,7 @@ const BulkUpload = () => {
     setUploading(true);
     try {
       const response = await axios.post(
-        "http://46.202.166.65/products/bulk-upload",
+        `${API_URL}/products/bulk-upload`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
