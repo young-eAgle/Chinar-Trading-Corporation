@@ -91,8 +91,23 @@ router.post("/signup", signupLimiter, async(req, res) => {
 
         // Generate verification token for new users
         if (!user.emailVerified) {
-            const verificationToken = await user.getVerificationToken();
-            await sendVerificationEmail(user.email, verificationToken);
+            try {
+                const verificationToken = await user.getVerificationToken();
+                try {
+                    await sendVerificationEmail(user.email, verificationToken);
+                    console.log(`Verification email sent successfully to ${user.email}`);
+                } catch (emailError) {
+                    console.error("Email sending failed:", emailError.message);
+                    if (emailError.code === 'EAUTH') {
+                        console.error("Authentication error - check your Gmail credentials");
+                        console.error("If using Gmail with 2FA, ensure you're using an App Password");
+                    }
+                    // Continue with registration even if email fails
+                }
+            } catch (tokenError) {
+                console.error("Failed to generate verification token:", tokenError.message);
+                // Continue with registration even if token generation fails
+            }
         }
 
         await user.save();

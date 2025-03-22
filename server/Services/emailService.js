@@ -1,11 +1,35 @@
 import nodemailer from 'nodemailer';
 // // import "dotenv/config"; // Removed to prevent .env file from being loaded multiple times
 
+// Log email configuration for debugging (without showing the actual password)
+console.log("Email configuration:");
+console.log("- EMAIL_USER:", process.env.EMAIL_USER);
+console.log("- EMAIL_PASS set:", !!process.env.EMAIL_PASS);
+console.log("- EMAIL_PASS length:", process.env.EMAIL_PASS ? process.env.EMAIL_PASS.length : 0);
+console.log("- NODE_ENV:", process.env.NODE_ENV);
+
 const transporter = nodemailer.createTransport({
     service: "gmail",
+    host: "smtp.gmail.com",
+    port: process.env.NODE_ENV === 'production' ? 465 : 587,
+    secure: process.env.NODE_ENV === 'production', // true for 465, false for other ports
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
+    },
+    debug: true // Enable debug logs
+});
+
+// Add a simple verify method to test connection on startup
+transporter.verify(function(error, success) {
+    if (error) {
+        console.log("Email service error:", error);
+        console.log("This error often occurs when:");
+        console.log("1. You need to use an App Password if 2FA is enabled on Gmail");
+        console.log("2. There are quotes in your EMAIL_PASS environment variable");
+        console.log("3. Less secure app access is disabled (for accounts without 2FA)");
+    } else {
+        console.log("Email server is ready to send messages");
     }
 });
 
