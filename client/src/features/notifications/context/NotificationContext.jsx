@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import { requestNotificationPermission, onMessageListener } from '../utils/firebase';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const NotificationContext = createContext();
 
@@ -99,7 +100,7 @@ export const NotificationProvider = ({ children }) => {
         headers['Guest-Email'] = guestEmail;
       }
 
-      const response = await fetch('http://46.202.166.65/api/notifications', {
+      const response = await fetch(`${API_URL}/api/notifications`, {
         headers,
         credentials: 'include'
       });
@@ -240,7 +241,7 @@ export const NotificationProvider = ({ children }) => {
       
       console.log('Registering notification token:', { hasUserToken: !!userToken, hasEmail: !!body.email });
       
-      const response = await fetch('http://46.202.166.65/api/notifications/register', {
+      const response = await fetch(`${API_URL}/api/notifications/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -287,7 +288,7 @@ export const NotificationProvider = ({ children }) => {
 
   const updatePreferences = async (newPreferences) => {
     try {
-      const response = await fetch('http://46.202.166.65/api/notifications/preferences', {
+      const response = await fetch(`${API_URL}/api/notifications/preferences`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -324,7 +325,7 @@ export const NotificationProvider = ({ children }) => {
     try {
       const userToken = localStorage.getItem('token');
       
-      const response = await fetch(`http://46.202.166.65/api/notifications/${notificationId}/read`, {
+      const response = await fetch(`${API_URL}/api/notifications/${notificationId}/read`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
