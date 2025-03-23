@@ -2,6 +2,7 @@
 import express from "express";
 import CategoryModel from '../models/model.category.js';
 import mongoose from "mongoose";
+import SubcategoryModel from '../models/model.subcategory.js';
 const router = express.Router();
 
 
@@ -40,7 +41,7 @@ router.get("/:categoryId", async(req, res)=>{
   try {
       const {categoryId} = req.params;
       if(!mongoose.Types.ObjectId.isValid(categoryId)){
-        return res.status(400).json({error:"Invalide Category ID format"})
+        return res.status(400).json({error:"Invalid Category ID format"})
       }
       const category = await CategoryModel.findById(categoryId);
       if (!category) return res.status(404).json({ message: "Category not found" })
@@ -51,7 +52,85 @@ router.get("/:categoryId", async(req, res)=>{
     res.status(500).json({ error: error.message });
   }
 
-})
+});
+
+
+// Update a Category
+router.put("/:categoryId", async(req, res) => {
+    try {
+      const {categoryId} = req.params;
+      if(!mongoose.Types.ObjectId.isValid(categoryId)){
+        return res.status(400).json({error:"Invalid Category ID format"})
+      }
+  
+      const { name } = req.body;
+      if (!name || name.trim() === '') {
+        return res.status(400).json({error: "Category name is required"});
+      }
+  
+      const updatedCategory = await CategoryModel.findByIdAndUpdate(
+        categoryId,
+        { name },
+        { new: true, runValidators: true }
+      );
+  
+      if (!updatedCategory) {
+        return res.status(404).json({message: "Category not found"});
+      }
+  
+      res.json(updatedCategory);
+    } catch (error) {
+      res.status(500).json({error: error.message});
+    }
+  });
+  
+  // Delete a Category
+  router.delete("/:categoryId", async(req, res) => {
+    try {
+      const {categoryId} = req.params;
+      if(!mongoose.Types.ObjectId.isValid(categoryId)){
+        return res.status(400).json({error:"Invalid Category ID format"})
+      }
+  
+      // Check if category has subcategories
+      const subcategories = await SubcategoryModel.find({category: categoryId});
+      if (subcategories.length > 0) {
+        return res.status(400).json({
+          error: "Cannot delete category with subcategories",
+          subcategories: subcategories.length
+        });
+      }
+  
+      const deletedCategory = await CategoryModel.findByIdAndDelete(categoryId);
+      if (!deletedCategory) {
+        return res.status(404).json({message: "Category not found"});
+      }
+  
+      res.json({
+        success: true,
+        message: "Category deleted successfully",
+        deletedCategory
+      });
+    } catch (error) {
+      res.status(500).json({error: error.message});
+    }
+  });
+  
+  // Search categories by name
+  router.get("/search/:query", async(req, res) => {
+    try {
+      const { query } = req.params;
+      const categories = await CategoryModel.find({
+        name: { $regex: query, $options: "i" }
+      });
+      
+      res.json(categories);
+    } catch (error) {
+      res.status(500).json({error: error.message});
+    }
+  });
+  
+
 
 
 

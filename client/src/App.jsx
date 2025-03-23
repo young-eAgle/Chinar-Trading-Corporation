@@ -22,7 +22,11 @@ import MyOrders from "./pages/orders/MyOrders";
 import WhatsappChat from "./components/whatsappChat";
 import { CartProvider } from "./pages/cart/cartContext";
 import { AdminProvider } from "./Context/adminContext";
-// 
+// Product & Category Management
+import ProductManagement from "./pages/admin/products/ProductManagement";
+import ProductForm from "./pages/admin/products/ProductForm";
+import CategoryManagement from "./pages/admin/categories/CategoryManagement";
+import SubcategoryManagement from "./pages/admin/categories/SubcategoryManagement";
 
 import "./App.css";
 import ReviewList from "./pages/reviews/ReviewList";
@@ -80,7 +84,7 @@ function App() {
                   <Route path="/admin/dashboard" element={<AdminDashboard />} />
                   <Route path="/admin/login" element={<AdminLoign />} />
                   <Route path="/admin/register" element={<AdminRegister />} />
-                  <Route path="/admin/order-management" element={<AdminOrders />} />
+                
 
                   {/* 🔹 Customer & Guest Restricted Routes */}
                   <Route path="/checkout" element={
@@ -90,17 +94,52 @@ function App() {
                   } />
 
                   {/* 🔹 Admin-Only Routes */}
-                  <Route path="/admin-order" element={
+
+                  <Route path="/admin/order-management" element={
                     <ProtectedRoutes allowedRoles={["admin"]}>
                       <AdminOrders />
                     </ProtectedRoutes>
                   } />
 
-                  {/* <Route path="/user-order" element={
-                    <ProtectedRoutes allowedRoles={["admin", "customer, guest"]}>
-                      <UserOrders />
+
+
+                  {/* Product Management Routes */}
+                  <Route path="/admin/products" element={
+                    <ProtectedRoutes allowedRoles={["admin"]}>
+                      <ProductManagement />
                     </ProtectedRoutes>
-                  } /> */}
+                  } />
+                  
+                  <Route path="/admin/products/add" element={
+                    <ProtectedRoutes allowedRoles={["admin"]}>
+                      <ProductForm />
+                    </ProtectedRoutes>
+                  } />
+                  
+                  <Route path="/admin/products/edit/:id" element={
+                    <ProtectedRoutes allowedRoles={["admin"]}>
+                      <ProductForm />
+                    </ProtectedRoutes>
+                  } />
+                  
+                  {/* Category Management Routes */}
+                  <Route path="/admin/categories" element={
+                    <ProtectedRoutes allowedRoles={["admin"]}>
+                      <CategoryManagement />
+                    </ProtectedRoutes>
+                  } />
+                  
+                  <Route path="/admin/subcategories" element={
+                    <ProtectedRoutes allowedRoles={["admin"]}>
+                      <SubcategoryManagement />
+                    </ProtectedRoutes>
+                  } />
+
+                  <Route path="/admin-order" element={
+                    <ProtectedRoutes allowedRoles={["admin"]}>
+                      <AdminOrders />
+                    </ProtectedRoutes>
+                  } />
 
                   <Route path="/upload" element={
                     <ProtectedRoutes allowedRoles={["admin"]}>

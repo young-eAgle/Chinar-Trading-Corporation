@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAdmin } from '../Context/adminContext';
 import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
-import { FaBox, FaUsers, FaShoppingCart, FaDollarSign, FaChartLine, FaListAlt } from 'react-icons/fa';
+import { FaBox, FaUsers, FaShoppingCart, FaDollarSign, FaChartLine, FaListAlt, FaTag, FaTags } from 'react-icons/fa';
 const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const AdminDashboard = () => {
@@ -166,6 +166,24 @@ const AdminDashboard = () => {
                                 >
                                     <FaBox />
                                     Manage Products
+                                </button>
+                            )}
+                            {hasPermission('manage_products') && (
+                                <button
+                                    onClick={() => navigate('/admin/categories')}
+                                    className="w-full flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
+                                >
+                                    <FaTags />
+                                    Manage Categories
+                                </button>
+                            )}
+                            {hasPermission('manage_products') && (
+                                <button
+                                    onClick={() => navigate('/admin/subcategories')}
+                                    className="w-full flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+                                >
+                                    <FaTag />
+                                    Manage Subcategories
                                 </button>
                             )}
                             {hasPermission('view_analytics') && (

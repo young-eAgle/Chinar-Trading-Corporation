@@ -132,6 +132,202 @@ router.post(
     }
   );
   
+  // Create a new product
+router.post("/", upload.array("images", 5), async (req, res) => {
+  try {
+    console.log('📦 Creating new product...');
+    const { 
+      name, 
+      brand, 
+      price, 
+      discount, 
+      actualPrice, 
+      available, 
+      categoryId, 
+      subcategoryId, 
+      company 
+    } = req.body;
+
+    // Basic validation
+    if (!name || !price || !categoryId || !subcategoryId) {
+      return res.status(400).json({
+        error: "Required fields missing",
+        details: "Product name, price, category, and subcategory are required"
+      });
+    }
+
+    let uploadedImageUrls = [];
+    let mainImageUrl = "";
+
+    // Upload images to Cloudinary if provided
+    if (req.files && req.files.length > 0) {
+      const uploadPromises = req.files.map(async (file) => {
+        try {
+          const result = await cloudinary.uploader.upload(file.path);
+          return result.secure_url;
+        } catch (error) {
+          console.error(`❌ Error uploading image ${file.originalname}:`, error);
+          throw error;
+        } finally {
+          // Delete local file after upload attempt
+          if (fs.existsSync(file.path)) {
+            fs.unlinkSync(file.path);
+          }
+        }
+      });
+
+      uploadedImageUrls = await Promise.all(uploadPromises);
+      mainImageUrl = uploadedImageUrls[0]; // First image is main image
+    }
+
+    // Prepare product data
+    const productData = {
+      name,
+      brand,
+      price: parseFloat(price),
+      actualPrice: parseFloat(actualPrice || price),
+      discount: parseFloat(discount || 0),
+      available: available === "true" || available === true,
+      categoryId,
+      subcategoryId,
+      company: company || brand,
+      imageUrl: mainImageUrl,
+      images: uploadedImageUrls
+    };
+
+    // Create and save the new product
+    const newProduct = new Product(productData);
+    await newProduct.save();
+
+    console.log(`✅ Created new product: ${newProduct.name} (${newProduct._id})`);
+    res.status(201).json(newProduct);
+  } catch (error) {
+    console.error('❌ Error creating product:', error);
+    res.status(500).json({
+      error: "Failed to create product",
+      details: error.message
+    });
+  }
+});
+
+// Update an existing product
+router.put("/:productId", upload.array("images", 5), async (req, res) => {
+  try {
+    const { productId } = req.params;
+    console.log(`📦 Updating product: ${productId}`);
+
+    // Check if product exists
+    const existingProduct = await Product.findById(productId);
+    if (!existingProduct) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    // Extract request data
+    const { 
+      name, 
+      brand, 
+      price, 
+      discount, 
+      actualPrice, 
+      available, 
+      categoryId, 
+      subcategoryId, 
+      company,
+      deleteImages // array of image URLs to delete
+    } = req.body;
+
+    // Handle image uploads if any
+    let uploadedImageUrls = [];
+    
+    if (req.files && req.files.length > 0) {
+      const uploadPromises = req.files.map(async (file) => {
+        try {
+          const result = await cloudinary.uploader.upload(file.path);
+          return result.secure_url;
+        } catch (error) {
+          console.error(`❌ Error uploading image ${file.originalname}:`, error);
+          throw error;
+        } finally {
+          // Delete local file after upload attempt
+          if (fs.existsSync(file.path)) {
+            fs.unlinkSync(file.path);
+          }
+        }
+      });
+
+      uploadedImageUrls = await Promise.all(uploadPromises);
+    }
+
+    // Handle image deletions and updates
+    let currentImages = [...existingProduct.images];
+    
+    // Remove any images that should be deleted
+    if (deleteImages && Array.isArray(deleteImages)) {
+      currentImages = currentImages.filter(url => !deleteImages.includes(url));
+    }
+    
+    // Add new images
+    currentImages = [...currentImages, ...uploadedImageUrls];
+    
+    // Prepare update data
+    const updateData = {
+      name: name || existingProduct.name,
+      brand: brand || existingProduct.brand,
+      price: parseFloat(price || existingProduct.price),
+      discount: parseFloat(discount ?? existingProduct.discount),
+      actualPrice: parseFloat(actualPrice || existingProduct.actualPrice),
+      available: available === "true" || available === true || (available !== "false" && available !== false && existingProduct.available),
+      categoryId: categoryId || existingProduct.categoryId,
+      subcategoryId: subcategoryId || existingProduct.subcategoryId,
+      company: company || existingProduct.company,
+      images: currentImages,
+      imageUrl: currentImages.length > 0 ? currentImages[0] : existingProduct.imageUrl
+    };
+
+    // Update the product
+    const updatedProduct = await Product.findByIdAndUpdate(
+      productId,
+      updateData,
+      { new: true, runValidators: true }
+    ).populate("categoryId").populate("subcategoryId");
+
+    console.log(`✅ Updated product: ${updatedProduct.name}`);
+    res.json(updatedProduct);
+  } catch (error) {
+    console.error('❌ Error updating product:', error);
+    res.status(500).json({
+      error: "Failed to update product",
+      details: error.message
+    });
+  }
+});
+
+// Delete a product
+router.delete("/:productId", async (req, res) => {
+  try {
+    const { productId } = req.params;
+    console.log(`🗑️ Deleting product: ${productId}`);
+
+    const deletedProduct = await Product.findByIdAndDelete(productId);
+
+    if (!deletedProduct) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    console.log(`✅ Deleted product: ${deletedProduct.name}`);
+    res.json({
+      success: true,
+      message: "Product deleted successfully",
+      deletedProduct
+    });
+  } catch (error) {
+    console.error('❌ Error deleting product:', error);
+    res.status(500).json({
+      error: "Failed to delete product",
+      details: error.message
+    });
+  }
+});
 
 
   // Get all products with category and subcategory data
@@ -158,6 +354,36 @@ router.get("/", async (req, res) => {
     });
   }
 });
+
+
+
+// Get a single product by ID
+router.get("/:productId", async (req, res) => {
+  try {
+    const { productId } = req.params;
+    console.log(`📦 Fetching product: ${productId}`);
+
+    const product = await Product.findById(productId)
+      .populate("categoryId")
+      .populate("subcategoryId")
+      .lean();
+
+    if (!product) {
+      console.log(`⚠️ Product not found: ${productId}`);
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    console.log(`✅ Successfully fetched product: ${product.name}`);
+    res.json(product);
+  } catch (error) {
+    console.error('❌ Error fetching product:', error);
+    res.status(500).json({
+      error: "Failed to fetch product",
+      details: error.message
+    });
+  }
+});
+
 
 
 // Get all products of a specific subcategory
@@ -217,24 +443,24 @@ router.get("/category/:categoryId", async (req, res) => {
 });
 
 
-  router.get("/filters", async(req, res)=>{
+router.get("/filters", async(req, res)=>{
 
-    try {
+  try {
       const {maxPrice} = req.query;
       console.log(req.query.maxPrice);
       let filter = {};
     
       if (maxPrice && !isNaN(maxPrice)) {
        filter.price = { $lte: parseInt(maxPrice, 10) };
-     }
+  }
       const products = await Product.find(filter);
       res.json(products);
     
-    } catch (error) {
+ } catch (error) {
      res.status(500).json({error:"Server error"})
      
-    }
-   });
+  }
+});
 
 
 
