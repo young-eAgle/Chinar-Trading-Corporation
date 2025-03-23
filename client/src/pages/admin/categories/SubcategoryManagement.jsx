@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAdmin } from '../../../Context/adminContext';
 import { toast } from 'react-hot-toast';
 import { FaPlus, FaEdit, FaTrash, FaSearch, FaArrowLeft } from 'react-icons/fa';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const SubcategoryManagement = () => {
   const { admin } = useAdmin();
@@ -53,7 +54,7 @@ const SubcategoryManagement = () => {
   
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/categories');
+      const response = await fetch(`${API_URL}/categories`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch categories');
@@ -70,7 +71,7 @@ const SubcategoryManagement = () => {
   const fetchSubcategories = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/subcategories');
+      const response = await fetch(`${API_URL}/subcategories`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch subcategories');
@@ -92,7 +93,7 @@ const SubcategoryManagement = () => {
     }
     
     try {
-      const response = await fetch(`http://localhost:5000/subcategories/${subcategoryId}`, {
+      const response = await fetch(`${API_URL}/subcategories/${subcategoryId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${admin?.token}`
@@ -150,8 +151,8 @@ const SubcategoryManagement = () => {
     
     try {
       const url = modalType === 'add' 
-        ? 'http://localhost:5000/subcategories/add-subcategory' 
-        : `http://localhost:5000/subcategories/${editSubcategory._id}`;
+        ? `${API_URL}/subcategories/add-subcategory` 
+        : `${API_URL}/subcategories/${editSubcategory._id}`;
       
       const method = modalType === 'add' ? 'POST' : 'PUT';
       

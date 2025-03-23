@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAdmin } from '../../../Context/adminContext';
 import { toast } from 'react-hot-toast';
 import { FaPlus, FaEdit, FaTrash, FaSearch, FaFilter } from 'react-icons/fa';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const ProductManagement = () => {
   const { admin } = useAdmin();
@@ -57,7 +58,7 @@ const ProductManagement = () => {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/products', {
+      const response = await fetch(`${API_URL}/products`, {
         headers: {
           'Authorization': `Bearer ${admin?.token}`
         }
@@ -80,7 +81,7 @@ const ProductManagement = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/categories');
+      const response = await fetch(`${API_URL}/categories`);
       if (!response.ok) {
         throw new Error('Failed to fetch categories');
       }
@@ -95,7 +96,7 @@ const ProductManagement = () => {
 
   const fetchSubcategories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/subcategories');
+      const response = await fetch(`${API_URL}/subcategories`);
       if (!response.ok) {
         throw new Error('Failed to fetch subcategories');
       }
@@ -114,7 +115,7 @@ const ProductManagement = () => {
     }
     
     try {
-      const response = await fetch(`http://localhost:5000/products/${productId}`, {
+      const response = await fetch(`${API_URL}/products/${productId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${admin?.token}`

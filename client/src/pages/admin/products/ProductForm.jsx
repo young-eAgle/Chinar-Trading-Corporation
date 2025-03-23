@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useAdmin } from '../../../Context/adminContext';
 import { toast } from 'react-hot-toast';
 import { FaSave, FaArrowLeft, FaUpload, FaTrash } from 'react-icons/fa';
+const API_URL = import.meta.env.VITE_API_URL || "https://api.chinartrading.com";
 
 const ProductForm = () => {
   const { admin } = useAdmin();
@@ -98,8 +99,8 @@ const ProductForm = () => {
   const fetchCategories = async () => {
     try {
       const [categoriesResponse, subcategoriesResponse] = await Promise.all([
-        fetch('http://localhost:5000/categories'),
-        fetch('http://localhost:5000/subcategories')
+        fetch(`${API_URL}/categories`),
+        fetch(`${API_URL}/subcategories`)
       ]);
       
       if (!categoriesResponse.ok || !subcategoriesResponse.ok) {
@@ -123,7 +124,7 @@ const ProductForm = () => {
   const fetchProductDetails = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5000/products/${id}`);
+      const response = await fetch(`${API_URL}/products/${id}`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch product details');
@@ -299,8 +300,8 @@ const ProductForm = () => {
       
       // Send request
       const url = isEditMode 
-        ? `http://localhost:5000/products/${id}` 
-        : 'http://localhost:5000/products';
+        ? `${API_URL}/products/${id}` 
+        : `${API_URL}/products`;
       
       const method = isEditMode ? 'PUT' : 'POST';
       
